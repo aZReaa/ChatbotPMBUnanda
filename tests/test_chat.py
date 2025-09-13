@@ -1,7 +1,10 @@
 import os
+import sys
+from pathlib import Path
 from fastapi.testclient import TestClient
 
 os.environ['TESTING'] = '1'
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from app.main import app
 
@@ -26,7 +29,14 @@ def test_search():
     assert 'results' in r.json()
 
 
-def test_chat():
+def test_chat_out_of_scope():
     r = client.post('/chat', json={'message': 'Halo'})
     assert r.status_code == 200
-    assert 'answer' in r.json()
+    assert r.json()['status'] == 'out_of_scope'
+
+
+def test_chat_in_scope():
+    r = client.post('/chat', json={'message': 'berapa biaya pendaftaran pmb?'})
+    data = r.json()
+    assert data['status'] == 'ok'
+    assert data['citations']
