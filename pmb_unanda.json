@@ -1,0 +1,752 @@
+{
+  "university": {
+    "name": "Universitas Andi Djemma (Unanda)",
+    "pmb_base_url": "https://pmb.unanda.ac.id/",
+    "address": "Jl. Puang H. Daud Nomor 4 Kota Palopo",
+    "phone": "+62 878-8623-1970",
+    "email": "rektorat@unanda.ac.id",
+    "additional_contacts": [
+      {
+        "type": "WhatsApp Hotline",
+        "contact": "082159054365",
+        "description": "Hotline PMB Unanda via WhatsApp"
+      },
+      {
+        "type": "Lokasi offline pendaftaran",
+        "contact": "Gedung Rektorat Jl. Puang Haji Daud No.4",
+        "description": "Alamat Gedung Rektorat untuk pendaftaran offline"
+      },
+      {
+        "type": "Lokasi offline pendaftaran",
+        "contact": "Gedung A Jl. Sultan Hasanuddin No.13",
+        "description": "Alamat Gedung A untuk pendaftaran offline"
+      },
+      {
+        "type": "Media sosial",
+        "contact": "Humas Unanda Official",
+        "description": "Akun media sosial untuk informasi PMB"
+      },
+      {
+        "type": "Media sosial",
+        "contact": "Unanda Hits",
+        "description": "Akun media sosial tambahan untuk informasi PMB"
+      }
+    ]
+  },
+  "admission_tracks": [
+    {
+      "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+      "degree_level": "RPL",
+      "system": "Reguler",
+      "registration_period": {
+        "start_date": "2025-01-01",
+        "end_date": "2025-10-01",
+        "raw_text": "1 Jan 2025 – 1 Oct 2025"
+      },
+      "registration_fee_idr": 175000,
+      "selection_steps": [
+        "Pilih jalur pendaftaran",
+        "Isi formulir pendaftaran",
+        "Bayar biaya pendaftaran",
+        "Unggah berkas dan ikuti seleksi"
+      ],
+      "requirements": [
+        "KTP/SIM/Passport",
+        "Pas foto 3×4 dan 2×3 (berpakaian formal dan latar belakang merah)",
+        "Ijazah/SKL dilegalisir",
+        "Kartu Keluarga",
+        "Bukti pembayaran"
+      ],
+      "notes": "Jalur RPL ditujukan bagi calon mahasiswa yang mengakui pembelajaran sebelumnya. Biaya pendaftaran berbeda dari biaya kuliah per semester.",
+      "sources": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+      "degree_level": "RPL",
+      "system": "Reguler",
+      "registration_period": {
+        "start_date": "2025-03-01",
+        "end_date": "2025-10-01",
+        "raw_text": "1 Mar 2025 – 1 Oct 2025"
+      },
+      "registration_fee_idr": 175000,
+      "selection_steps": [
+        "Pilih jalur pendaftaran",
+        "Isi formulir pendaftaran",
+        "Bayar biaya pendaftaran",
+        "Unggah berkas dan ikuti seleksi"
+      ],
+      "requirements": [
+        "KTP/SIM/Passport",
+        "Pas foto 3×4 dan 2×3 (berpakaian formal dan latar belakang merah)",
+        "Ijazah/SKL dilegalisir",
+        "Kartu Keluarga",
+        "Bukti pembayaran"
+      ],
+      "notes": "Jalur RPL SKS Perolehan 2025 Ganjil merupakan gelombang pertama untuk RPL dengan periode pendaftaran hingga 1 Oct 2025.",
+      "sources": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "track_name": "PMB Pascasarjana (S2) 2025 Ganjil – Seleksi Mandiri Gelombang 1",
+      "degree_level": "S2",
+      "system": "Reguler",
+      "registration_period": {
+        "start_date": "2025-06-01",
+        "end_date": "2025-11-30",
+        "raw_text": "1 Jun 2025 – 30 Nov 2025"
+      },
+      "registration_fee_idr": 1000000,
+      "selection_steps": [
+        "Pilih jalur pendaftaran",
+        "Isi formulir pendaftaran",
+        "Bayar biaya pendaftaran",
+        "Unggah berkas dan ikuti seleksi"
+      ],
+      "requirements": [
+        "KTP/SIM/Passport",
+        "Pas foto 3×4 dan 2×3 (berpakaian formal dan latar belakang merah)",
+        "Ijazah/SKL dilegalisir",
+        "Kartu Keluarga",
+        "Bukti pembayaran"
+      ],
+      "notes": "Jalur seleksi mandiri untuk program pascasarjana (S2). Calon mahasiswa harus telah menyelesaikan jenjang sarjana.",
+      "sources": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+      "degree_level": "S1",
+      "system": "Reguler",
+      "registration_period": {
+        "start_date": "2025-06-02",
+        "end_date": "2025-09-20",
+        "raw_text": "2 Jun 2025 – 20 Sep 2025"
+      },
+      "registration_fee_idr": 175000,
+      "selection_steps": [
+        "Pilih jalur pendaftaran",
+        "Isi formulir pendaftaran",
+        "Bayar biaya pendaftaran",
+        "Unggah berkas dan ikuti seleksi"
+      ],
+      "requirements": [
+        "KTP/SIM/Passport",
+        "Pas foto 3×4 dan 2×3 (berpakaian formal dan latar belakang merah)",
+        "Ijazah/SKL dilegalisir",
+        "Kartu Keluarga",
+        "Bukti pembayaran"
+      ],
+      "notes": "Jalur seleksi mandiri untuk jenjang sarjana (S1) di perguruan tinggi swasta gelombang ke‑4 tahun akademik 2025.",
+      "sources": [
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "programs": [
+    {
+      "program_name": "Administrasi Publik",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": "B",
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Agribinis",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": "B",
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Agroteknologi",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": "Baik Sekali",
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Budidaya Perairan",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Ekonomi Pembangunan",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": "B",
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Ilmu Hukum",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": "Baik Sekali",
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Kehutanan",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Manajemen",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Teknik Informatika",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Teknik Pertambangan",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Teknik Sipil",
+      "degree_level": "S1",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB RPL Perolehan SKS 2024 Genap – RPL Perolehan SKS Gelombang 2",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-01-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Jan 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB RPL SKS Perolehan 2025 Ganjil – RPL Perolehan SKS Gelombang 1",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-03-01",
+            "end_date": "2025-10-01",
+            "raw_text": "1 Mar 2025 – 1 Oct 2025"
+          }
+        },
+        {
+          "track_name": "PMB Mandiri (S1) 2025 Ganjil – Seleksi Mandiri PTS Gelombang 4",
+          "registration_fee_idr": 175000,
+          "registration_period": {
+            "start_date": "2025-06-02",
+            "end_date": "2025-09-20",
+            "raw_text": "2 Jun 2025 – 20 Sep 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Administrasi Publik (S2)",
+      "degree_level": "S2",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB Pascasarjana (S2) 2025 Ganjil – Seleksi Mandiri Gelombang 1",
+          "registration_fee_idr": 1000000,
+          "registration_period": {
+            "start_date": "2025-06-01",
+            "end_date": "2025-11-30",
+            "raw_text": "1 Jun 2025 – 30 Nov 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Manajemen dan Kewirausahaan (S2)",
+      "degree_level": "S2",
+      "faculty": null,
+      "accreditation": "Minimum",
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB Pascasarjana (S2) 2025 Ganjil – Seleksi Mandiri Gelombang 1",
+          "registration_fee_idr": 1000000,
+          "registration_period": {
+            "start_date": "2025-06-01",
+            "end_date": "2025-11-30",
+            "raw_text": "1 Jun 2025 – 30 Nov 2025"
+          }
+        }
+      ],
+      "description": "Program Magister Manajemen dan Kewirausahaan memadukan ilmu manajemen dan kewirausahaan berbasis kearifan lokal untuk mengembangkan potensi sumber daya di Palopo dan Tana Luwu.",
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Ilmu Perikanan (S2)",
+      "degree_level": "S2",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB Pascasarjana (S2) 2025 Ganjil – Seleksi Mandiri Gelombang 1",
+          "registration_fee_idr": 1000000,
+          "registration_period": {
+            "start_date": "2025-06-01",
+            "end_date": "2025-11-30",
+            "raw_text": "1 Jun 2025 – 30 Nov 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Ilmu Pertanian (S2)",
+      "degree_level": "S2",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB Pascasarjana (S2) 2025 Ganjil – Seleksi Mandiri Gelombang 1",
+          "registration_fee_idr": 1000000,
+          "registration_period": {
+            "start_date": "2025-06-01",
+            "end_date": "2025-11-30",
+            "raw_text": "1 Jun 2025 – 30 Nov 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    },
+    {
+      "program_name": "Hukum (S2)",
+      "degree_level": "S2",
+      "faculty": null,
+      "accreditation": null,
+      "study_system": "Reguler",
+      "available_tracks": [
+        {
+          "track_name": "PMB Pascasarjana (S2) 2025 Ganjil – Seleksi Mandiri Gelombang 1",
+          "registration_fee_idr": 1000000,
+          "registration_period": {
+            "start_date": "2025-06-01",
+            "end_date": "2025-11-30",
+            "raw_text": "1 Jun 2025 – 30 Nov 2025"
+          }
+        }
+      ],
+      "description": null,
+      "documents": [],
+      "sources": [
+        ""
+      ]
+    }
+  ],
+  "application_guide": {
+    "steps": [
+      "Pilih jalur pendaftaran sesuai pilihan dan ketentuan kampus",
+      "Isi formulir pendaftaran secara online di pmb.unanda.ac.id",
+      "Lakukan pembayaran biaya pendaftaran melalui rekening atau metode yang ditentukan",
+      "Siapkan dan unggah dokumen yang diperlukan (KTP/SIM/Paspor, pas foto, ijazah/SKL, Kartu Keluarga, bukti pembayaran)",
+      "Ikuti tahapan seleksi sesuai jadwal dan petunjuk pihak kampus"
+    ],
+    "required_documents": [
+      "KTP/SIM/Passport",
+      "Pas foto 3×4 dan 2×3 (berpakaian formal latar belakang merah)",
+      "Ijazah/SKL yang dilegalisir",
+      "Kartu Keluarga",
+      "Bukti pembayaran biaya pendaftaran"
+    ],
+    "payment_instructions": "Bayar biaya pendaftaran sesuai nominal yang ditentukan melalui bank atau metode pembayaran yang disediakan; simpan bukti pembayaran untuk diunggah.",
+    "result_announcement_info": "Informasi pengumuman hasil seleksi tidak tersedia pada situs; peserta diharapkan memantau akun pendaftaran atau pengumuman resmi kampus.",
+    "faq": [],
+    "sources": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "tuition_and_fees": {
+    "summary": "Biaya kuliah terdiri dari beberapa komponen seperti biaya pendaftaran, biaya orientasi mahasiswa (ospek), SPP, dan BPP. Nilai SPP dan BPP tidak terbaca dengan jelas dari brosur.",
+    "items": [
+      {
+        "name": "Pendaftaran",
+        "amount_idr": 75000,
+        "frequency": "once",
+        "notes": "Biaya formulir pendaftaran sekali bayar"
+      },
+      {
+        "name": "Biaya orientasi mahasiswa (ospek)",
+        "amount_idr": 500000,
+        "frequency": "once",
+        "notes": "Pembayaran saat mengikuti masa orientasi mahasiswa"
+      },
+      {
+        "name": "SPP",
+        "amount_idr": null,
+        "frequency": "per_semester",
+        "notes": "Biaya SPP per semester tidak jelas pada brosur"
+      },
+      {
+        "name": "BPP",
+        "amount_idr": null,
+        "frequency": "per_semester",
+        "notes": "BPP dapat dibayar di muka atau diangsur per semester; jumlah tidak jelas"
+      }
+    ],
+    "sources": [
+      ""
+    ]
+  },
+  "announcements": [],
+  "notes": {
+    "missing": [
+      "Nilai lengkap SPP dan BPP per semester tidak terbaca dari brosur",
+      "Tidak ada jadwal detail pengumuman hasil seleksi pada situs",
+      "Beberapa prodi tidak mencantumkan status akreditasi",
+      "Fakultas untuk setiap program studi tidak tertera di halaman publik"
+    ],
+    "assumptions": [
+      "Periode pendaftaran yang hanya menyebut bulan/tahun dinormalisasi ke tanggal pertama bulan tersebut.",
+      "Biaya pendaftaran diambil dari halaman jalur seleksi; di brosur tertera Rp200.000 dicoret menjadi Rp175.000, sehingga digunakan nilai Rp175.000."
+    ]
+  },
+  "last_crawled_at": "2025-09-13T00:00:00Z"
+}
+
