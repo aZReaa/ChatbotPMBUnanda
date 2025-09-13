@@ -1,92 +1,100 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import List, Dict, Any
+import json
 import os
 from pathlib import Path
-import json
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse, JSONResponse
-from pydantic import BaseModel
+from dotenv import load_dotenv
 
-from .deps import get_llm, get_embeddings
-from .rag import build_vectorstore, search_docs
-from .guards import validate_message, is_out_of_scope, validate_citations
+# Load environment variables
+load_dotenv()
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+# ---- Konfigurasi ----
+ALLOWED_TOPICS = ["jalur","biaya","periode","syarat","prodi","kontak","dokumen"]
+MIN_SCORE = 0.40  # naikkan bila masih "ngarang"
+TOP_K = 5
 
-llm = get_llm()
-vectorstore = build_vectorstore(get_embeddings())
+app = FastAPI(title="Chatbot PMB Unanda")
 
-app = FastAPI()
+class Citation(BaseModel):
+    doc_id: str
 
-
-@app.get('/health')
-def health():
-    return {"status": "ok"}
-
-
-@app.get('/')
-def root() -> HTMLResponse:
-    html = (BASE_DIR / 'public' / 'index.html').read_text(encoding='utf-8')
-    return HTMLResponse(html)
-
-
-@app.get('/faq')
-def faq():
-    data = json.loads((BASE_DIR / 'data' / 'pmb' / 'pmb_unanda.json').read_text(encoding='utf-8'))
-    return JSONResponse(content=data)
-
-
-@app.get('/search')
-def search(q: str, k: int = 4):
-    docs = vectorstore.similarity_search(q, k=k)
-    return {
-        "results": [
-            {"content": d.page_content, "source": d.metadata.get('source')}
-            for d in docs
-        ]
-    }
-
-
-class ChatInput(BaseModel):
+class ChatReq(BaseModel):
     message: str
-    top_k: int = 5
+    top_k: int | None = None
 
+class ChatResp(BaseModel):
+    status: str
+    answer: str
+    citations: List[Citation]
 
-@app.post('/chat')
-def chat(inp: ChatInput):
-    msg = validate_message(inp.message)
-    if is_out_of_scope(msg):
-        return {
-            "status": "out_of_scope",
-            "answer": "Pertanyaan di luar cakupan PMB Unanda. Silakan hubungi panitia PMB di 082159054365 atau email pmb@unanda.ac.id.",
-            "citations": [],
-        }
+# ---- Load data PMB ----
+def load_kb() -> list[dict]:
+    # dukung path lama (root) & yang disarankan (data/pmb/)
+    candidates = [
+        Path("data/pmb/pmb_unanda.json"),
+        Path("pmb_unanda.json"),
+    ]
+    for p in candidates:
+        if p.exists():
+            with p.open("r", encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, dict) and "items" in data:
+                return data["items"]
+            return data if isinstance(data, list) else []
+    return []
 
-    docs = search_docs(vectorstore, msg, k=inp.top_k, min_score=0.35)
-    if not docs:
-        return {
-            "status": "not_found",
-            "answer": "Maaf, belum ada data yang mendukung pertanyaan tersebut di basis data PMB kami.",
-            "citations": [],
-        }
+KB = load_kb()
 
-    if os.getenv("TESTING"):
-        answer = {
-            "status": "ok",
-            "answer": "dummy",
-            "citations": [{"doc_id": docs[0]["doc_id"], "spans": []}],
-        }
-    else:
-        system_prompt = (BASE_DIR / 'prompts' / 'system.md').read_text(encoding='utf-8')
-        context = "\n".join(f"{d['doc_id']}: {d['text']}" for d in docs)
-        schema = '{"status": "ok | not_found | out_of_scope", "answer": "string", "citations": [{"doc_id": "string", "spans": ["string"]}]}'
-        prompt = f"{system_prompt}\nSkema JSON jawaban: {schema}\n\n[Context]\n{context}\n\n[User Question]\n{msg}"
-        raw = llm.invoke(prompt, temperature=0.2, top_p=0.1, response_format={"type": "json_object"})
-        answer = json.loads(raw)
+# ---- Util sederhana: OOS & fuzzy skor ringan ----
+def is_out_of_scope(q: str) -> bool:
+    ql = q.lower()
+    return not any(t in ql for t in ALLOWED_TOPICS)
 
-    if not validate_citations(answer, docs) or answer.get("status") != "ok":
-        return {
-            "status": "not_found",
-            "answer": "Maaf, belum ada data yang mendukung pertanyaan tersebut di basis data PMB kami.",
-            "citations": [],
-        }
+def score_item(q: str, it: dict) -> float:
+    blob = json.dumps(it, ensure_ascii=False).lower()
+    toks = [t for t in q.lower().split() if len(t) >= 3]
+    hits = sum(1 for t in toks if t in blob)
+    return hits / max(1, len(toks))
 
-    return answer
+def retrieve(q: str, k: int) -> List[Dict[str, Any]]:
+    scored = [{
+        "id": it.get("id") or it.get("title") or f"doc_{i}",
+        "text": it,
+        "score": score_item(q, it)
+    } for i, it in enumerate(KB)]
+    scored = [s for s in scored if s["score"] >= MIN_SCORE]
+    scored.sort(key=lambda x: x["score"], reverse=True)
+    return scored[:k]
+
+@app.get("/health")
+def health():
+    return {"ok": True, "items": len(KB)}
+
+@app.post("/chat", response_model=ChatResp)
+def chat(req: ChatReq):
+    top_k = req.top_k or TOP_K
+
+    if is_out_of_scope(req.message):
+        return ChatResp(
+            status="out_of_scope",
+            answer="Pertanyaan di luar cakupan PMB Unanda. Silakan hubungi panitia PMB.",
+            citations=[],
+        )
+
+    ctx = retrieve(req.message, k=top_k)
+    if not ctx:
+        return ChatResp(
+            status="not_found",
+            answer="Maaf, belum ada data yang mendukung pertanyaan tersebut di basis data PMB kami.",
+            citations=[],
+        )
+
+    best = ctx[0]
+    doc_id = str(best["id"])
+    ringkas = best["text"]
+    return ChatResp(
+        status="ok",
+        answer=f"Berikut info terkait: {ringkas}",
+        citations=[Citation(doc_id=doc_id)],
+    )
