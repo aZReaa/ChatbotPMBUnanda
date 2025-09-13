@@ -1,8 +1,9 @@
-fastapi
-uvicorn
-langchain
-langchain-community
-langchain-openai
-sentence-transformers
-faiss-cpu
-requests
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+langchain==0.1.20
+langchain-community==0.1.20
+langchain-openai==0.1.7
+sentence-transformers==2.6.0
+faiss-cpu==1.7.4
+requests==2.31.0
+python-dotenv==1.0.1
